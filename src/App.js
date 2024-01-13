@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// task-manager-frontend/src/App.js
+import { ChakraProvider } from '@chakra-ui/react';
+import TaskList from './TaskList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ChakraProvider>
+            <div>
+                <h1>Task Manager</h1>
+                <TaskList />
+            </div>
+        </ChakraProvider>
+    );
 }
 
 export default App;
